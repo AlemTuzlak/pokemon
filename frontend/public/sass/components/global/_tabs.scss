@@ -1,0 +1,33 @@
+.tabs {
+    display: flex;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+
+    &__option {
+        transition: all .2s;
+        cursor: pointer;
+        margin-bottom: 1rem;
+
+        &:not(:last-child){
+            margin-right: 3rem;
+
+            @include media-tablet {
+                margin-right: 2rem;
+            }
+        }
+
+        &:hover {
+            transform: scale(1.2);
+            border-bottom: 2px solid $dark-gray;
+        }
+        &--active {
+            color: $yellow-main;
+            border-bottom: 2px solid $yellow-main;
+
+            &:hover {
+                transform: scale(1.2);
+                border-bottom: 2px solid $yellow-main;
+            }
+        }
+    }
+}

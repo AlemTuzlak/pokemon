@@ -1,0 +1,44 @@
+@mixin scrollbar() {
+    &::-webkit-scrollbar-track {
+        border-radius: 1rem;
+        margin-right: .2rem;
+        background-color: $white;
+        display: none;
+    }
+
+    &::-webkit-scrollbar {
+        width: 1rem;
+        margin-right: .2rem;
+        background-color: $white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-image: linear-gradient($yellow-main, $yellow-dark);
+    } 
+}
+
+
+//* MEDIA QUERIES //
+//* 0 - 600px mobile
+//* 600-968px tablet
+//* 968-1200px tablet-portrait
+//* 
+
+@mixin media-phone {
+    @media (max-width:600px) {
+        @content
+    };
+}
+
+@mixin media-tablet {
+    @media (max-width:968px) {
+        @content
+    };
+}
+
+@mixin media-tablet-portrait {
+    @media (max-width:1200px) {
+        @content
+    };
+}

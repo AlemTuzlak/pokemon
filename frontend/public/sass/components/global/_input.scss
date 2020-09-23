@@ -1,0 +1,56 @@
+.input {
+    position: relative;
+    margin-bottom: 1.5rem;
+
+    &--file {
+        padding-top: 1.5rem;
+    }
+    
+    &__main {
+        font-family: Cairo;
+        font-size: $small-font-size;
+        background-color: $gray-white;
+        padding-left: 3.5rem;
+        padding-right: .5rem;
+        height: 5rem;
+    }
+
+    &__label {
+        text-transform: capitalize;
+        font-size: 1.6rem;
+        margin-bottom: .5rem;
+    }
+    &__icon {
+        position: absolute;
+        height: 1.5rem;
+        width: 1.5rem;
+        top: 50%;
+        transform: translate(1rem, -50%);
+    }
+    &__main:focus {
+        background-color: $white;
+    }
+
+    &__error {
+        outline: 1px solid $red;
+
+        &:focus {
+            outline: 1px solid $red;
+        }
+        
+        &__container {
+            margin-bottom: 0;
+        }
+
+        &__span {
+            color: $red;
+            font-family: Cairo;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        &__icon {
+            top: 37%;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+import {
+    FETCHING_ALL_POKEMON_IN_PROGRESS,
+    STORE_ALL_POKEMON,
+    FETCHING_ALL_POKEMON_COMPLETED,
+    FETCHING_SINGLE_POKEMON_IN_PROGRESS,
+    FETCHING_SINGLE_POKEMON_COMPLETED,
+    STORE_SINGLE_POKEMON,
+    STORING_FAVORITE_IN_PROGRESS,
+    STORING_FAVORITE_COMPLETED,
+    STORE_FAVORITES
+} from '../constants';
+
+export const ACTION_FETCHING_ALL_POKEMON_IN_PROGRESS = () => { return { type: FETCHING_ALL_POKEMON_IN_PROGRESS } };
+export const ACTION_STORE_ALL_POKEMON = (pokemon, total) => { return { type: STORE_ALL_POKEMON, payload: {pokemon, total} } };
+export const ACTION_FETCHING_ALL_POKEMON_COMPLETED = () => { return { type: FETCHING_ALL_POKEMON_COMPLETED } };
+
+export const ACTION_FETCHING_SINGLE_POKEMON_IN_PROGRESS = () => { return { type: FETCHING_SINGLE_POKEMON_IN_PROGRESS } };
+export const ACTION_FETCHING_SINGLE_POKEMON_COMPLETED = () => { return { type: FETCHING_SINGLE_POKEMON_COMPLETED } };
+export const ACTION_STORE_SINGLE_POKEMON = (pokemon) => { return { type: STORE_SINGLE_POKEMON, payload: pokemon } };
+
+export const ACTION_STORING_FAVORITE_IN_PROGRESS = () => { return { type: STORING_FAVORITE_IN_PROGRESS } };
+export const ACTION_STORING_FAVORITE_COMPLETED = () => { return { type: STORING_FAVORITE_COMPLETED } };
+export const ACTION_STORE_FAVORITES = (favorites) => { return { type: STORE_FAVORITES, payload: favorites } };

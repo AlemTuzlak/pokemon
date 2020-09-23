@@ -1,0 +1,121 @@
+
+.button {
+    z-index: inherit;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    display: inline-block;
+    transition: all .2s;
+    position: relative;
+    backface-visibility: hidden;
+    font-size: $default-font-size;
+    font-family: Mont;
+    outline: none;
+    user-select: none;
+    border: none;
+    max-width: 30rem;
+    font-family: Mont;
+
+    & > img {
+        height: 3rem
+    }
+    &__disabled {
+        opacity: 0.5;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 1rem rgba($black,.2);
+        &::after{
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+    
+    &:active {
+        transform: translateY(-.1rem);
+        box-shadow: 0 .5rem 1rem rgba($black,.2);
+    }
+    
+    &--yellow{
+        background-color: $yellow-main;
+        color: $dark-gray;
+    }
+
+    &--white{
+        background-color: $white;
+        color: $dark-gray;
+        border: 1px solid $dark-gray;
+    }
+    &--white-yellow{
+        background-color: $white;
+        color: $yellow-dark;
+        border: 1px solid $yellow-dark;
+    }
+    &--yellow-dark{
+        background-color: $yellow-dark;
+        color: $white;
+    }
+
+    &--red {
+        background-color: $red;
+        color: $white;
+        border: 1px solid $red;
+    }
+    &--green {
+        background-color: $green;
+        color: $white;
+        padding: 1rem 5rem;
+        border-radius: .7rem;
+    }
+    &--yellow-gradient {
+        background-image: linear-gradient(to right, rgba($yellow-dark, 0.9), rgba($yellow-dark, 0.7));
+        color: $white;
+    }
+
+    &--black{
+        background-color: $dark-gray;
+        color: $white;
+    }
+
+    &--hero{
+        margin-top: -7rem;
+    }
+
+    &--login {
+        padding: .8rem 5rem;
+        color: $white;
+        font-size: 1.4rem;
+        margin-bottom: 4rem;
+        background-color: $yellow-dark;
+       
+        & > img {
+            height: 14px;
+        }
+
+        @include media-tablet {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+@media (max-width: 750px){
+    .button {
+        padding: 1.5rem 2rem;
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 600px){
+    .button {
+        &--community {
+            padding: 1rem;
+            font-size: 1.2rem;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.mobile-header {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    box-shadow: 0px -3px 10px $black;
+    z-index: 6;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    &__logo {
+        width: 60%;
+    }
+}

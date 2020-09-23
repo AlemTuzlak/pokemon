@@ -1,0 +1,228 @@
+.login {
+    width: 100%;
+    display: flex;
+    min-height: calc(100vh - 9rem);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+    padding: 0 30vw;
+    @include media-phone {
+        padding: 0 5vw;
+    }
+    &__top-box {
+        position: absolute;
+        height: 50vh;
+        left: 0;
+        transform: translateX(62%);
+        width: 20%;
+        background-color: $dark-gray;
+        z-index: 3;
+    }
+
+    &__bottom-box {
+        position: absolute;
+        height: 50vh;
+        left: 0;
+        transform: translate(335%, 15%);
+        width: 20%;
+        z-index: 1;
+        background-color: $yellow-dark;
+    }
+
+    &__paw {
+        position: absolute;
+    }
+
+    &__main-container{
+        position: relative;
+        width: 70%;
+        height: 75vh;
+        box-shadow: 0px 3px 10px $gray-light;
+        z-index: 4;
+        background-color: $white;
+        @include media-tablet {
+            width: 97%;
+        }
+    }
+
+    &__switch-box {
+        height: 100%;
+        width: 50%;
+        position: absolute;
+        left: 0;
+        background-color: $yellow-dark;
+        transition: all .2s;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        overflow: hidden;
+        transition: all $loginPageSwitchDuration;
+
+        &__content {
+            z-index: 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        &__img {
+            height: 100%;
+            width: 125%;
+            z-index: 1;
+            position: absolute;
+            transition: all .2s;
+        }
+
+        &__overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to right bottom,  $yellow-dark, rgba($yellow-main, 0.7));
+            z-index: 2;
+            transition: all .2s;
+        }
+
+        &__title {
+            font-family: Mont;
+            user-select: none;
+            font-size: 4rem;
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: start;
+            flex-direction: column;
+            transition: all .2s;
+
+            @include media-tablet {
+                font-size: 2.2rem;
+            }
+        }
+
+        &__line {
+            margin-top: 0;
+        }
+
+        &__description {
+            font-size: $default-font-size;
+            font-family: Cairo;
+            width: 80%;
+            text-align: left;
+            font-weight: 600;
+            transition: all .2s;
+
+            @include media-tablet {
+                font-size: $small-font-size;
+            }
+        }
+    }
+
+    &__container {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0%;
+        z-index: 1;
+        padding: 3rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: $white;
+        overflow-y: auto;
+        transition: all $loginPageSwitchDuration;
+
+        @include scrollbar();
+
+        &__logo {
+            height: 7rem;
+            margin-bottom: 1rem;
+        }
+
+        &__title {
+            font-family: Mont;
+            font-size: 3.2rem;
+            letter-spacing: -0.1rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            @include media-tablet {
+                font-size: 2rem;
+            }
+        }
+
+        &__subtitle {
+            font-size: 1.6rem;
+            width: 33%;
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        &__icons {
+            display: flex;
+            justify-content: space-evenly;
+            width: 30%;
+            margin-bottom: 3rem;
+        }
+
+        &__icon {
+            height: 4rem;
+            width: 4rem;
+            object-fit: contain;
+        }
+
+        &__form-title {
+            font-size: 1rem;
+            font-family: Cairo;
+            color: $gray-light;
+        }
+
+        &__form {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            @include media-tablet {
+                width: 80%;
+            }
+        }
+
+        &__privacy {
+            font-size: 1rem;
+            font-family: Cairo;
+            color: $gray-light;
+            transition: all .4s;
+            
+            &--clickable {
+                cursor: pointer;
+                display: inline-block;
+                &:hover {
+                    color: $yellow-main;
+                    transform: scale(1.05) translateY(-.2rem);
+                    text-shadow: .1px .1px .1px $black;
+                }
+            }
+        }
+    }
+
+    &__forgot-password {
+        font-family: Cairo;
+        font-size: $small-font-size;
+        text-decoration: underline;
+        color: $black;
+        font-weight: bold;
+        margin-bottom: 3rem;
+        cursor: pointer;
+        @include media-tablet {
+            margin-bottom: 1.5rem;
+        }
+    }
+    
+}

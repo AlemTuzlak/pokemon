@@ -1,0 +1,29 @@
+.textarea {
+    position: relative;
+    width: 100%;
+    font-family: Cairo;
+    font-size: $small-font-size;
+    background-color: $gray-white;
+    padding: 1rem;
+    min-height: 20rem;
+    border-radius: .5rem;
+    border: 1px solid $gray-white-border;
+    resize: none;
+
+    &__error:not(:focus) {
+        border: 1px solid $red;
+    }
+    &:focus {
+        background-color: $white;
+    }
+
+    &--dark {
+        background-color: $darkLight;
+        border: 1px solid $dark-gray;
+        color: $white;
+        margin-bottom: 1rem;
+        &:focus {
+            background-color: $darkLight;
+        }
+    }
+}

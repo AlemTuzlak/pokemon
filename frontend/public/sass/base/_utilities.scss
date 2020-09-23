@@ -1,0 +1,58 @@
+.bold {
+    font-weight: bold;
+}
+
+.content-container {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 6rem;
+    @include scrollbar();
+}
+
+.white-line {
+    width: 25%;
+    border-top: 2px solid $white;
+    margin: 0;
+}
+
+.results {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 75%;
+    
+    @include media-tablet {
+        width: 60%;
+    }
+    @include media-phone {
+        width: 100%;
+    }
+}
+
+.block {
+    display: block;
+}
+
+.unclickable {
+    pointer-events: none;
+}
+
+.full-width {
+    width: 100%
+}
+
+.mb1 {
+    margin-bottom: 1rem;
+}
+
+.mt2{
+    margin-top: 2rem;
+}
+
+.right {
+    float: right;
+}
+.text-center {
+    text-align: center;
+}
